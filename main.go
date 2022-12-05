@@ -11,6 +11,6 @@ import (
 func main()  {
 	l := log.New(os.Stdout, "product-api", log.LstdFlags)
 	hh := handlers.NewHello(l)
-
+	log.Println("Hello from", hh)
 	http.ListenAndServe(":9090", nil)
 }
