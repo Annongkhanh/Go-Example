@@ -1,3 +1,3 @@
-module home/an/Go-ex/golang/handlers
+module github.com/Annongkhanh/Go-Example
 
 go 1.19
