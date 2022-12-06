@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"time"
 )
 
 type Goodbye struct{
@@ -24,5 +25,8 @@ func(g*Goodbye) ServeHTTP(rw http.ResponseWriter, r*http.Request){
 		return
 	}
 	fmt.Fprintf(rw, "Data %s", d)
+
+	tm := time.Now().Month().String()
+	rw.Write([]byte("The time is: " + tm))
 }
 
